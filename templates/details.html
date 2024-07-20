@@ -1,0 +1,64 @@
+{%extends"base.html" %}
+{%block content%}
+  <main>
+    <div class="product-container">
+      <div class="product-image">
+        <img
+          src="https://rukminim2.flixcart.com/image/416/416/xif0q/data-cable/usb-type-c-cable/a/k/b/zeb-cu3100v-usb-to-type-c-braided-cable-zebronics-original-imagp24aqtwtvwaf.jpeg?q=70"
+          alt="EchoFlex Pro Headphones" width="500" height="500">
+      </div>
+      <div class="product-info">
+        <h1 class="product-title">EchoFlex Pro</h1>
+        <p class="product-price">$299.99</p>
+        <p class="product-description">Experience unparalleled audio clarity with the EchoFlex Pro. These adaptive
+          noise-cancelling headphones are designed to deliver crystal-clear sound in any environment, making them
+          perfect for audiophiles and professionals alike.</p>
+        <div class="product-features">
+          <h2>Key Features:</h2>
+          <ul>
+            <li>Advanced adaptive noise-cancellation technology</li>
+            <li>High-resolution audio support</li>
+            <li>40mm neodymium drivers for powerful, balanced sound</li>
+            <li>Bluetooth 5.2 with aptX HD codec support</li>
+            <li>30-hour battery life with quick charging</li>
+            <li>Comfortable over-ear design with memory foam ear cushions</li>
+            <li>Touch controls for easy operation</li>
+            <li>Built-in microphone for clear voice calls</li>
+          </ul>
+        </div>
+        <button class="add-to-cart" onclick="addToCart()">Buy Now from Flipkart</button>
+        <button class="add-to-cart" onclick="addToCart()">Buy Now from Amazon</button>
+        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+
+    <section class="reviews">
+      <h2>Customer Reviews</h2>
+      <div class="review">
+        <div class="review-header">
+          <span class="review-author">John D.</span>
+          <span class="review-rating">★★★★★</span>
+        </div>
+        <p class="review-content">These headphones are amazing! The sound quality is outstanding, and the
+          noise-cancellation is top-notch. I use them for both work and leisure, and they never disappoint.</p>
+      </div>
+      <div class="review">
+        <div class="review-header">
+          <span class="review-author">Sarah M.</span>
+          <span class="review-rating">★★★★☆</span>
+        </div>
+        <p class="review-content">Great sound and comfortable to wear for long periods. The battery life is impressive.
+          The only minor issue is that they're a bit bulky for travel, but the sound quality makes up for it.</p>
+      </div>
+      <div class="review">
+        <div class="review-header">
+          <span class="review-author">Alex T.</span>
+          <span class="review-rating">★★★★★</span>
+        </div>
+        <p class="review-content">As an audio engineer, I'm very picky about my headphones. The EchoFlex Pro exceeded my
+          expectations. The clarity and balance across all frequencies are exceptional. Highly recommended for
+          professionals.</p>
+      </div>
+    </section>
+  </main>
+{% endblock%}

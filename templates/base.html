@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <!-- <base href="https://audiosynergyheadphones.com/" /> -->
+    <title>Earbuzz - Premium Earphones for Audiophiles</title>
+    <meta name="description"
+        content="Buy amazing earphones with earbuzz make your audio journey amazing and enjoyable.">
+    <meta name="keywords" content="">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    {%block seo%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/details.css')}}">
+    {%endblock%}
+</head>
+
+<body>
+    <header>
+        <nav>
+          <a href="/">
+            <div class="logo">EarBuzz</div>
+          </a>
+    
+          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+          <ul id="menu">
+            <li><a href="/">Home</a></li>
+            
+            
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+{%block content%}
+
+{% endblock %}
+
+
+
+<footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="https://audiosynergyheadphones.com/wireless-earbuds">Wireless Earbuds</a></li>
+          <li><a href="https://audiosynergyheadphones.com/over-ear-headphones">Over-Ear Headphones</a></li>
+          <li><a href="https://audiosynergyheadphones.com/in-ear-headphones">In-Ear Headphones</a></li>
+          <li><a href="https://audiosynergyheadphones.com/studio-headphones">Studio Headphones</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://audiosynergyheadphones.com/faq">FAQ</a></li>
+          
+          <li><a href="https://audiosynergyheadphones.com/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://mastiflicks.site">Mastiflicks</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://facebook.com/lowoncost" target="_blank">Facebook</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 EarBuzz. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+<script>
+    function addToCart() {
+      alert('EchoFlex Pro has been added to your cart!');
+      // In a real implementation, this would add the item to the cart
+      // and update the cart icon/count in the navigation
+    }
+  
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  
+    
+  </script>
+</html>
