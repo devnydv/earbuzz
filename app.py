@@ -1,11 +1,13 @@
 from flask import Flask, render_template
-
+from flipkartgrid import senddata
+from flpkartp import detailsdata
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    data = senddata()
+    return render_template("index.html", data= data)
 
 @app.route("/products") 
 def product():
@@ -13,7 +15,8 @@ def product():
 
 @app.route("/details") 
 def details():
-    return render_template("details.html")
+    details = detailsdata()
+    return render_template("details.html", data= details)
 
 
 if __name__== "__main__":

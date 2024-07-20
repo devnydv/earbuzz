@@ -1,6 +1,7 @@
 {%extends"base.html" %}
 {%block content%}
   <main>
+    
     <div class="product-container">
       <div class="product-image">
         <img
@@ -8,8 +9,13 @@
           alt="EchoFlex Pro Headphones" width="500" height="500">
       </div>
       <div class="product-info">
-        <h1 class="product-title">EchoFlex Pro</h1>
-        <p class="product-price">$299.99</p>
+        <h1 class="product-title">{{data["name"][:35]}}...</h1>
+        <div class="price-container">
+          
+          <p class="original-price">$299.99</p>
+          <p class="discount-percentage">17% OFF</p>
+        </div>
+        <p class="product-rating">4.8 ★ (1,245 reviews)</p>
         <p class="product-description">Experience unparalleled audio clarity with the EchoFlex Pro. These adaptive
           noise-cancelling headphones are designed to deliver crystal-clear sound in any environment, making them
           perfect for audiophiles and professionals alike.</p>
@@ -26,9 +32,11 @@
             <li>Built-in microphone for clear voice calls</li>
           </ul>
         </div>
-        <button class="add-to-cart" onclick="addToCart()">Buy Now from Flipkart</button>
-        <button class="add-to-cart" onclick="addToCart()">Buy Now from Amazon</button>
-        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        <div class="button-container">
+          <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+          <button class="share-button" onclick="shareProduct()">Share</button>
+          <button class="buy-flipkart" onclick="buyFromFlipkart()">Buy from Flipkart</button>
+        </div>
       </div>
     </div>
 

@@ -35,9 +35,34 @@ main {
     margin-bottom: 1rem;
   }
 
+  .price-container {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
   .product-price {
     font-size: 1.8rem;
     color: var(--secondary-color);
+  }
+
+  .original-price {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-decoration: line-through;
+  }
+
+  .discount-percentage {
+    font-size: 1.2rem;
+    color: var(--discount-color);
+    font-weight: bold;
+  }
+
+  .product-rating {
+    font-size: 1.1rem;
+    color: #f1c40f;
+    /* color: var(--text-color); */
     margin-bottom: 1rem;
   }
 
@@ -73,22 +98,49 @@ main {
     margin-left: -1em;
   }
 
-  .add-to-cart {
-    background-color: var(--primary-color);
-    margin: 0.5rem;
-    color: var(--icon-color);
-    border: none;
-    padding: 1rem 2rem;
+  .button-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .add-to-cart, .share-button, .buy-flipkart {
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border: none;
+  }
+
+  .add-to-cart {
+    background-color: var(--primary-color);
+    color: var(--icon-color);
   }
 
   .add-to-cart:hover {
     background-color: #7d3c98;
   }
+
+  .share-button {
+    background-color: var(--secondary-color);
+    color: var(--icon-color);
+  }
+
+  .share-button:hover {
+    background-color: #27ae60;
+  }
+
+  .buy-flipkart {
+    background-color: var(--flipkart-color);
+    color: var(--icon-color);
+  }
+
+  .buy-flipkart:hover {
+    background-color: #1c5dc9;
+  }
+
 
   
 

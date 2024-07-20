@@ -1,0 +1,495 @@
+<html><head><base href="https://audiosynergyheadphones.com/product/echoflex-pro"><title>EchoFlex Pro - AudioSynergy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+  
+  :root {
+    --primary-color: #8e44ad;
+    --secondary-color: #2ecc71;
+    --text-color: #e0e0e0;
+    --bg-color: #121212;
+    --card-bg-color: #1e1e1e;
+    --header-bg-color: rgba(30, 30, 30, 0.95);
+    --icon-color: #f0f0f0;
+    --flipkart-color: #2874f0;
+    --discount-color: #e74c3c;
+    --star-color: #f1c40f;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: var(--header-bg-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--icon-color);
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--icon-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+
+  nav ul li {
+    margin-left: 2rem;
+  }
+
+  nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: var(--primary-color);
+  }
+
+  main {
+    padding-top: 80px;
+  }
+
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 5%;
+    gap: 2rem;
+  }
+
+  .product-image {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .product-info {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .product-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .price-container {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-price {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+  }
+
+  .original-price {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-decoration: line-through;
+  }
+
+  .discount-percentage {
+    font-size: 1.2rem;
+    color: var(--discount-color);
+    font-weight: bold;
+  }
+
+  .product-rating {
+    font-size: 1.2rem;
+    color: var(--star-color);
+    margin-bottom: 1rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-features {
+    margin-bottom: 1.5rem;
+  }
+
+  .product-features h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .product-features ul {
+    list-style-type: none;
+    padding-left: 1rem;
+  }
+
+  .product-features li {
+    margin-bottom: 0.5rem;
+  }
+
+  .product-features li:before {
+    content: "•";
+    color: var(--secondary-color);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .add-to-cart, .share-button, .buy-flipkart {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+  }
+
+  .add-to-cart {
+    background-color: var(--primary-color);
+    color: var(--icon-color);
+  }
+
+  .add-to-cart:hover {
+    background-color: #7d3c98;
+  }
+
+  .share-button {
+    background-color: var(--secondary-color);
+    color: var(--icon-color);
+  }
+
+  .share-button:hover {
+    background-color: #27ae60;
+  }
+
+  .buy-flipkart {
+    background-color: var(--flipkart-color);
+    color: var(--icon-color);
+  }
+
+  .buy-flipkart:hover {
+    background-color: #1c5dc9;
+  }
+
+  .reviews {
+    padding: 2rem 5%;
+  }
+
+  .reviews h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .review {
+    background-color: var(--card-bg-color);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .review-author {
+    font-weight: 600;
+  }
+
+  .review-rating {
+    color: var(--star-color);
+  }
+
+  .review-content {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    padding: 3rem 5%;
+    margin-top: 2rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--icon-color);
+  }
+
+  .footer-section ul {
+    list-style: none;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section ul li a:hover {
+    color: var(--icon-color);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--header-bg-color);
+      padding: 1rem 0;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+
+    .product-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product-image, .product-info {
+      max-width: 100%;
+    }
+
+    .footer-section {
+      flex: 0 0 100%;
+      margin-right: 0;
+    }
+
+    .button-container {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">AudioSynergy</div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="menu">
+        <li><a href="https://audiosynergyheadphones.com/">Home</a></li>
+        <li><a href="https://audiosynergyheadphones.com/products">Products</a></li>
+        <li><a href="https://audiosynergyheadphones.com/about">About</a></li>
+        <li><a href="https://audiosynergyheadphones.com/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product-container">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="EchoFlex Pro Headphones" width="500" height="500">
+      </div>
+      <div class="product-info">
+        <h1 class="product-title">EchoFlex Pro</h1>
+        <div class="price-container">
+          <p class="product-price">$249.99</p>
+          <p class="original-price">$299.99</p>
+          <p class="discount-percentage">17% OFF</p>
+        </div>
+        <p class="product-rating">★★★★★ 4.8 (1,245 reviews)</p>
+        <p class="product-description">Experience unparalleled audio clarity with the EchoFlex Pro. These adaptive noise-cancelling headphones are designed to deliver crystal-clear sound in any environment, making them perfect for audiophiles and professionals alike.</p>
+        <div class="product-features">
+          <h3>Key Features:</h3>
+          <ul>
+            <li>Advanced adaptive noise-cancellation technology</li>
+            <li>High-resolution audio support</li>
+            <li>40mm neodymium drivers for powerful, balanced sound</li>
+            <li>Bluetooth 5.2 with aptX HD codec support</li>
+            <li>30-hour battery life with quick charging</li>
+            <li>Comfortable over-ear design with memory foam ear cushions</li>
+            <li>Touch controls for easy operation</li>
+            <li>Built-in microphone for clear voice calls</li>
+          </ul>
+        </div>
+        <div class="button-container">
+          <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+          <button class="share-button" onclick="shareProduct()">Share</button>
+          <button class="buy-flipkart" onclick="buyFromFlipkart()">Buy from Flipkart</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="reviews">
+      <h2>Customer Reviews</h2>
+      <div class="review">
+        <div class="review-header">
+          <span class="review-author">John D.</span>
+          <span class="review-rating">★★★★★</span>
+        </div>
+        <p class="review-content">These headphones are amazing! The sound quality is outstanding, and the noise-cancellation is top-notch. I use them for both work and leisure, and they never disappoint.</p>
+      </div>
+      <div class="review">
+        <div class="review-header">
+          <span class="review-author">Sarah M.</span>
+          <span class="review-rating">★★★★☆</span>
+        </div>
+        <p class="review-content">Great sound and comfortable to wear for long periods. The battery life is impressive. The only minor issue is that they're a bit bulky for travel, but the sound quality makes up for it.</p>
+      </div>
+      <div class="review">
+        <div class="review-header">
+          <span class="review-author">Alex T.</span>
+          <span class="review-rating">★★★★★</span>
+        </div>
+        <p class="review-content">As an audio engineer, I'm very picky about my headphones. The EchoFlex Pro exceeded my expectations. The clarity and balance across all frequencies are exceptional. Highly recommended for professionals.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="https://audiosynergyheadphones.com/wireless-earbuds">Wireless Earbuds</a></li>
+          <li><a href="https://audiosynergyheadphones.com/over-ear-headphones">Over-Ear Headphones</a></li>
+          <li><a href="https://audiosynergyheadphones.com/in-ear-headphones">In-Ear Headphones</a></li>
+          <li><a href="https://audiosynergyheadphones.com/studio-headphones">Studio Headphones</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://audiosynergyheadphones.com/faq">FAQ</a></li>
+          <li><a href="https://audiosynergyheadphones.com/shipping">Shipping</a></li>
+          <li><a href="https://audiosynergyheadphones.com/returns">Returns</a></li>
+          <li><a href="https://audiosynergyheadphones.com/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://audiosynergyheadphones.com/about">About Us</a></li>
+          <li><a href="https://audiosynergyheadphones.com/careers">Careers</a></li>
+          <li><a href="https://audiosynergyheadphones.com/press">Press</a></li>
+          <li><a href="https://audiosynergyheadphones.com/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://facebook.com/audiosynergy">Facebook</a></li>
+          <li><a href="https://twitter.com/audiosynergy">Twitter</a></li>
+          <li><a href="https://instagram.com/audiosynergy">Instagram</a></li>
+          <li><a href="https://youtube.com/audiosynergy">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 AudioSynergy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function addToCart() {
+      alert('EchoFlex Pro has been added to your cart!');
+      // In a real implementation, this would add the item to the cart
+      // and update the cart icon/count in the navigation
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+
+    function shareProduct() {
+      // In a real implementation, this would open a share dialog
+      // with options to share on various social media platforms
+      alert('Share functionality coming soon!');
+    }
+
+    function buyFromFlipkart() {
+      // In a real implementation, this would redirect to the Flipkart product page
+      window.open('https://www.flipkart.com/audio-video/headphones/pr?sid=0pm,fcn&otracker=categorytree&p%5B%5D=facets.brand%255B%255D%3DAudioSynergy', '_blank');
+    }
+  </script>
+</body></html>
