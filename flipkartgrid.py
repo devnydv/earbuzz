@@ -21,7 +21,7 @@ link = soup.find_all(attrs={"class": "slAVV4"})
 
 # grab name and link
 allproducts =[]
-for x in range(8):
+for x in range(4):
     url_title = link[x].find(attrs={"class": "wjcEIp"})
     pname = url_title.text
     img = link[x].find(attrs={"class": "DByuf4"})
