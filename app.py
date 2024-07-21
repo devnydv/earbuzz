@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template
 from flipkartgrid import senddata
 from flpkartp import detailsdata
