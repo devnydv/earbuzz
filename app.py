@@ -1,7 +1,7 @@
 
 from flask import Flask, render_template
 from flipkartgrid import senddata
-from flpkartp import detailsdata
+#from flpkartp import detailsdata
 app = Flask(__name__)
 
 
@@ -16,9 +16,9 @@ def product():
 
 @app.route("/details") 
 def details():
-    details = detailsdata()
-    return render_template("details.html", data= details)
-
+   # details = detailsdata()
+   # return render_template("details.html", data= details)
+    return "lol
 
 #if __name__== "__main__":
  #   app.run(debug=True)
