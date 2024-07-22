@@ -18,7 +18,7 @@ def product():
 def details():
    # details = detailsdata()
    # return render_template("details.html", data= details)
-    return "lol
+    return "lol"
 
 #if __name__== "__main__":
  #   app.run(debug=True)
