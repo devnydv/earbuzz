@@ -1,12 +1,18 @@
 from flask import Flask, render_template
-from flipkartgrid import senddata
-from flpkartp import detailsdata
-app = Flask(__name__)
+import json
+#from flipkartgrid import senddata
+#from flpkartp import detailsdata
 
+app = Flask(__name__)
+f = open("amazon.json", "rt")
+#print(f.read())
+
+data = json.load(f)
+data = data['results']
 
 @app.route("/")
 def index():
-    data = senddata()
+    #data = senddata()
     return render_template("index.html", data= data)
 
 @app.route("/products") 
@@ -15,7 +21,7 @@ def product():
 
 @app.route("/details") 
 def details():
-    details = detailsdata()
+    #details = detailsdata()
     return render_template("details.html", data= details)
 
 

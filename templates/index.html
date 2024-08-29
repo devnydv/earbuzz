@@ -1,159 +1,97 @@
 {%extends"base.html" %}
 {%block content%}
-  <main>
-    <section class="categories">
-<!-- jsut for some gap -->
-    </section>
-    <section class="reviews">
-      <p class="head2">Top selected Tws</p>
-    </section>
-    <section class="products">
-      
-      <div class="product">
-        <a href="/details.html">
-          <img
-            src="https://rukminim2.flixcart.com/image/416/416/xif0q/data-cable/usb-type-c-cable/a/k/b/zeb-cu3100v-usb-to-type-c-braided-cable-zebronics-original-imagp24aqtwtvwaf.jpeg?q=70"
-            alt="SonicWave Pro" width="250" height="250">
-          <div class="product-info">
-            <h3>SonicWave Pro</h3>
-            <span class="price">$199.99</span>
-          </div>
-          <div class="review-card">4.8 ★</div>
-          <div class="discount">-15%</div>
-        </a>
-      </div>
-      <div class="product">
-        <a href="/details.html">
-        <img
-          src="https://res.cloudinary.com/dqmlkqhwx/image/upload/c_scale,h_240,w_460/f_auto,q_auto/images/ubppthkkm8uiyvxmcpmt"
-          alt="BassBoost X" width="250" height="250">
+
+<main>
+  <section class="reviews">
+    <p class="head2">Featured Buzz</p>
+  </section>
+
+  <section class="categories">
+    <a href="/">
+      <div class="category ">TWS</div>
+    </a>
+    <a href="/">
+      <div class="category">Over-Ear Headphones</div>
+    </a>
+    <a href="/">
+      <div class="category">In-Ear Headphones</div>
+    </a>
+    <a href="/">
+      <div class="category">Wired Earphones</div>
+    </a>
+    <a href="/">
+      <div class="category">Studio Headphones</div>
+    </a>
+    <a href="/">
+      <div class="category">Studio Headphones</div>
+    </a>
+    <a href="/">
+      <div class="category">Neckbands</div>
+    </a>
+  </section>
+
+
+  <section class="products">
+    {%for item in range(12)%}
+    {% set disc = (data[item]['price']/ data[item]['originalPrice']) *100%}
+
+    <div class="product">
+      <a href="/details">
+        <img src="{{data[item]['image']['original']}}" alt="SonicWave Pro" width="250" height="250">
         <div class="product-info">
-          <h3>BassBoost X</h3>
-          <span class="price">$249.99</span>
+          <h3>{{data[item].title}}</h3>
+          <span class="price">₹ {{data[item].price}}</span>
         </div>
-        <div class="review-card">4.7 ★</div>
-        <div class="discount">-10%</div>
+        <div class="review-card">{{data[item].starRating}} ★</div>
+        <div class="discount">{{disc | int}}%</div>
       </a>
-      </div>
-      <div class="product">
-        <img
-          src="https://rukminim2.flixcart.com/image/416/416/xif0q/data-cable/usb-type-c-cable/a/k/b/zeb-cu3100v-usb-to-type-c-braided-cable-zebronics-original-imagp24aqtwtvwaf.jpeg?q=70"
-          alt="AirFlex Lite" width="250" height="250">
-        <div class="product-info">
-          <h3>AirFlex Lite</h3>
-          <span class="price">$129.99</span>
-        </div>
-        <div class="review-card">4.5 ★</div>
-        <div class="discount">-20%</div>
-      </div>
-      <div class="product">
-        <img
-          src="https://images.unsplash.com/photo-1527698952067-61fc35796fcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-          alt="StudioMaster" width="250" height="250">
-        <div class="product-info">
-          <h3>StudioMaster</h3>
-          <span class="price">$349.99</span>
-        </div>
-        <div class="review-card">4.9 ★</div>
-        <div class="discount">-5%</div>
-      </div>
-    </section>
+    </div>
+    {%endfor%}
+  </section>
 
-    <a href="/products" class="view-more">View More Products</a>
+  <a href="/products" class="view-more">View More Products</a>
 
-    <section class="reviews">
-      <p class="head2">Top selected Over-Ear Headphones</p>
-    </section>
-    <section class="products">
-      
-      <div class="product">
-        <a href="/details.html">
-          <img
-            src="https://rukminim2.flixcart.com/image/416/416/xif0q/data-cable/usb-type-c-cable/a/k/b/zeb-cu3100v-usb-to-type-c-braided-cable-zebronics-original-imagp24aqtwtvwaf.jpeg?q=70"
-            alt="SonicWave Pro" width="250" height="250">
-          <div class="product-info">
-            <h3>SonicWave Pro</h3>
-            <span class="price">$199.99</span>
-          </div>
-          <div class="review-card">4.8 ★</div>
-          <div class="discount">-15%</div>
-        </a>
-      </div>
-      <div class="product">
-        <a href="/details.html">
-        <img
-          src="https://res.cloudinary.com/dqmlkqhwx/image/upload/c_scale,h_240,w_460/f_auto,q_auto/images/ubppthkkm8uiyvxmcpmt"
-          alt="BassBoost X" width="250" height="250">
-        <div class="product-info">
-          <h3>BassBoost X</h3>
-          <span class="price">$249.99</span>
-        </div>
-        <div class="review-card">4.7 ★</div>
-        <div class="discount">-10%</div>
-      </a>
-      </div>
-      <div class="product">
-        <img
-          src="https://rukminim2.flixcart.com/image/416/416/xif0q/data-cable/usb-type-c-cable/a/k/b/zeb-cu3100v-usb-to-type-c-braided-cable-zebronics-original-imagp24aqtwtvwaf.jpeg?q=70"
-          alt="AirFlex Lite" width="250" height="250">
-        <div class="product-info">
-          <h3>AirFlex Lite</h3>
-          <span class="price">$129.99</span>
-        </div>
-        <div class="review-card">4.5 ★</div>
-        <div class="discount">-20%</div>
-      </div>
-      <div class="product">
-        <img
-          src="https://images.unsplash.com/photo-1527698952067-61fc35796fcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-          alt="StudioMaster" width="250" height="250">
-        <div class="product-info">
-          <h3>StudioMaster</h3>
-          <span class="price">$349.99</span>
-        </div>
-        <div class="review-card">4.9 ★</div>
-        <div class="discount">-5%</div>
-      </div>
-    </section>
 
-    <a href="/products.html" class="view-more">View More Products</a>
-    
-    <section class="reviews">
-      <h1>EarBuzz - Buy the best earphones</h1>
-      <div class="review">
-        <div class="review-header">
-          <!-- <span class="review-author">John D.</span>
+
+  <a href="/products.html" class="view-more">View More Products</a>
+
+  <section class="reviews">
+    <h1>EarBuzz - Buy the best earphones</h1>
+    <div class="review">
+      <div class="review-header">
+        <!-- <span class="review-author">John D.</span>
           <span class="review-rating">★★★★★</span> -->
-        </div>
-        <p class="review-content">We try to bring out the most valuable earphones for our users as earphones are very important product now days. These earphones are extracted from Flipkart and are listed in our site.</p>
       </div>
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">Earphone Details</span>
-          <span class="review-rating">★★★★☆</span>
-        </div>
-        <p class="review-content">Great sound and comfortable to wear for long periods. The battery life is impressive.
-          The only minor issue is that they're a bit bulky for travel, but the sound quality makes up for it.</p>
+      <p class="review-content">We try to bring out the most valuable earphones for our users as earphones are very
+        important product now days. These earphones are extracted from Flipkart and are listed in our site.</p>
+    </div>
+    <div class="review">
+      <div class="review-header">
+        <span class="review-author">Earphone Details</span>
+        <span class="review-rating">★★★★☆</span>
       </div>
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">Alex T.</span>
-          <span class="review-rating">★★★★★</span>
-        </div>
-        <p class="review-content">As an audio engineer, I'm very picky about my headphones. The EchoFlex Pro exceeded my
-          expectations. The clarity and balance across all frequencies are exceptional. Highly recommended for
-          professionals.</p>
+      <p class="review-content">Great sound and comfortable to wear for long periods. The battery life is impressive.
+        The only minor issue is that they're a bit bulky for travel, but the sound quality makes up for it.</p>
+    </div>
+    <div class="review">
+      <div class="review-header">
+        <span class="review-author">Alex T.</span>
+        <span class="review-rating">★★★★★</span>
       </div>
-    </section>
+      <p class="review-content">As an audio engineer, I'm very picky about my headphones. The EchoFlex Pro exceeded my
+        expectations. The clarity and balance across all frequencies are exceptional. Highly recommended for
+        professionals.</p>
+    </div>
+  </section>
 
-    <!-- <section class="cta-section">
+  <!-- <section class="cta-section">
       <h2>Unlock Your Sound Potential</h2>
       <p>Experience music like never before with AudioSynergy's cutting-edge technology.</p>
       <a href="#shop" class="cta-button">Explore Our Collection</a>
     </section> -->
-  </main>
+</main>
 
-  
+
 
 
 
