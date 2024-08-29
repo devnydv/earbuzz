@@ -1,8 +1,4 @@
 Flask==3.0.3
 bs4
 requests
-<<<<<<< HEAD
 gunicorn
-=======
-gunicorn
->>>>>>> 8579745221d297149f2c8dc730c591c95bc10f6b
