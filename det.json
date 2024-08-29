@@ -1,0 +1,239 @@
+{
+    "message": "Product retrieved successfully",
+    "amazonCountry": {
+      "base": "https://www.amazon.in",
+      "code": "in"
+    },
+    "id": "B0D5LTRCHT",
+    "productDetails": {
+      "id": "B0D5LTRCHT",
+      "productLink": "https://www.amazon.in/dp/B0D5LTRCHT",
+      "title": "Mivi SuperPods Dueto, True Wireless Earbuds, Dual Drivers, 13mm Woofer, 6mm Tweeter, 3D Soundstage, 60H Playtime, AI-ENC, BT v5.3, Type C Charger, Made in India Earbud",
+      "images": [
+        {
+          "original": "https://m.media-amazon.com/images/I/41VJwmEmeWL.jpg",
+          "small": "https://m.media-amazon.com/images/I/41VJwmEmeWL.jpg_AC_UY218_.jpg",
+          "medium": "https://m.media-amazon.com/images/I/41VJwmEmeWL.jpg_AC_UY327_.jpg",
+          "large": "https://m.media-amazon.com/images/I/41VJwmEmeWL.jpg_AC_UY436_.jpg"
+        },
+        {
+          "original": "https://m.media-amazon.com/images/I/51e9Q6gcgkL.jpg",
+          "small": "https://m.media-amazon.com/images/I/51e9Q6gcgkL.jpg_AC_UY218_.jpg",
+          "medium": "https://m.media-amazon.com/images/I/51e9Q6gcgkL.jpg_AC_UY327_.jpg",
+          "large": "https://m.media-amazon.com/images/I/51e9Q6gcgkL.jpg_AC_UY436_.jpg"
+        },
+        {
+          "original": "https://m.media-amazon.com/images/I/51-vp-ErBwL.jpg",
+          "small": "https://m.media-amazon.com/images/I/51-vp-ErBwL.jpg_AC_UY218_.jpg",
+          "medium": "https://m.media-amazon.com/images/I/51-vp-ErBwL.jpg_AC_UY327_.jpg",
+          "large": "https://m.media-amazon.com/images/I/51-vp-ErBwL.jpg_AC_UY436_.jpg"
+        },
+        {
+          "original": "https://m.media-amazon.com/images/I/41vaEu9RAHL.jpg",
+          "small": "https://m.media-amazon.com/images/I/41vaEu9RAHL.jpg_AC_UY218_.jpg",
+          "medium": "https://m.media-amazon.com/images/I/41vaEu9RAHL.jpg_AC_UY327_.jpg",
+          "large": "https://m.media-amazon.com/images/I/41vaEu9RAHL.jpg_AC_UY436_.jpg"
+        },
+        {
+          "original": "https://m.media-amazon.com/images/I/51k7JV63FdL.jpg",
+          "small": "https://m.media-amazon.com/images/I/51k7JV63FdL.jpg_AC_UY218_.jpg",
+          "medium": "https://m.media-amazon.com/images/I/51k7JV63FdL.jpg_AC_UY327_.jpg",
+          "large": "https://m.media-amazon.com/images/I/51k7JV63FdL.jpg_AC_UY436_.jpg"
+        },
+        {
+          "original": "https://m.media-amazon.com/images/I/519mpiXlztL.jpg",
+          "small": "https://m.media-amazon.com/images/I/519mpiXlztL.jpg_AC_UY218_.jpg",
+          "medium": "https://m.media-amazon.com/images/I/519mpiXlztL.jpg_AC_UY327_.jpg",
+          "large": "https://m.media-amazon.com/images/I/519mpiXlztL.jpg_AC_UY436_.jpg"
+        }
+      ],
+      "currency": "INR",
+      "price": 1899,
+      "originalPrice": 5999
+    },
+    "ratingReview": {
+      "starRating": 4.3,
+      "totalRatings": 611,
+      "insights": {
+        "overallResponseFromCustomer": "Customers like the sound quality, battery life, value, and connectivity of the headphones. For example, they mention that it offers a dynamic audio range, and is highly preferable device. They appreciate the fast charging and impressive battery life. Customers are also impressed with the value for money, saying it feels premium without the hefty price tag. They also appreciate the seamless connectivity.",
+        "aspects": [
+          {
+            "totalResponses": 311,
+            "positiveResponses": 285,
+            "negativeResponses": 26,
+            "gist": "Customers are satisfied with the sound quality of the headphones. They mention that they are not bass-heavy, the bass is enough to make its presence, and the rates just justify the quality of sound. They also say that the earphones offer a dynamic audio range, from lows to highs using the dual-driver. Customers also appreciate the nice playback time and the deep bass and crisp highs that make listening to music a 3D experience.",
+            "responses": [
+              "\"...to music, watching movies, or taking calls, the sound quality is consistently superb....\"",
+              "\"...the Mivi SuperPods Dueto offer great value for money with their sound quality, comfort, and functionality.\"",
+              "\"This mivi superpods is excellent  and sound quality is very osm  it's very easy to use  , its connecte very easily with my devices  it's easy to...\"",
+              "\"...With support for AAC codec and Bluetooth v5.3, the audio quality is impressive. Vocals are clear, treble sparkles, and the bass has a decent punch....\""
+            ]
+          },
+          {
+            "totalResponses": 291,
+            "positiveResponses": 269,
+            "negativeResponses": 22,
+            "gist": "Customers are satisfied with the quality of the headphones. They mention that it has good mm drivers, provides a great mic performance, and is long-lasting. They also say that it's durable, stylish, and easy to use.",
+            "responses": [
+              "\"...sleek, minimalist design of the SuperPods Dueto is both stylish and durable. They feel premium without the hefty price tag....\"",
+              "\"...Battery life is impressive, providing several hours of playback on a single charge, and the charging case is compact and convenient for carrying...\"",
+              "\"...it's easy to carry also  and the charging of this mivi superpods is long lasting as well i ordered purple color of this mivi superpods and its looks...\"",
+              "\"...The silicone ear tips fit snugly, and the IPX4 rating ensures they can handle your sweatiest workouts....\""
+            ]
+          },
+          {
+            "totalResponses": 113,
+            "positiveResponses": 106,
+            "negativeResponses": 7,
+            "gist": "Customers are satisfied with the battery life of the headphones. They mention that it provides several hours of playback on a single charge, charges fast, and lasts for at least 9 hours. Some say that the battery backup is reliable and good. Overall, most are happy with the performance and value for money.",
+            "responses": [
+              "\"...Battery Life : The battery life is impressive. I can use the SuperPods Dueto for a full day without worrying about recharging....\"",
+              "\"...Battery life is impressive, providing several hours of playback on a single charge, and the charging case is compact and convenient for carrying...\"",
+              "\"...Here’s where Mivi shines. The SuperPods Dueto offer an astounding 60 hours of playtime! Yes, you read that right....\"",
+              "\"...Rich bass, no delay while gaming & calls. Good charge backup. Performs great & Value for money. Very portable and fits perfectly. Go for it guys!!\""
+            ]
+          },
+          {
+            "totalResponses": 105,
+            "positiveResponses": 91,
+            "negativeResponses": 14,
+            "gist": "Customers like the value of the headphones. They say it feels premium without the hefty price tag. Some say it's comfortable and worth the money.",
+            "responses": [
+              "\"...They feel premium without the hefty price tag. The charging case is compact and fits easily in my pocket or bag....\"",
+              "\"...Overall, the Mivi SuperPods Dueto offer great value for money with their sound quality, comfort, and functionality.\"",
+              "\"...Good charge backup. Performs great & Value for money. Very portable and fits perfectly. Go for it guys!!\"",
+              "\"...Baas and vocal is clear and fast charging1999 value for money\""
+            ]
+          },
+          {
+            "totalResponses": 103,
+            "positiveResponses": 90,
+            "negativeResponses": 13,
+            "gist": "Customers like the connectivity of the headphones. They say it has fast connectivity, optimal performance, and seamless connectivity. Some say it connects very easily with their devices and has HD call clarity. Overall, most are satisfied with the product's connectivity.",
+            "responses": [
+              "\"...The Bluetooth connection is stable and strong, ensuring uninterrupted listening....\"",
+              "\"...easy to use, allowing me to adjust volume, change tracks, or take calls effortlessly....\"",
+              "\"...sound quality is very osm  it's very easy to use  , its connecte very easily with my devices  it's easy to carry also  and the charging of this mivi...\"",
+              "\"...Plus, the Type-C charging port ensures faster top-ups.\""
+            ]
+          },
+          {
+            "totalResponses": 93,
+            "positiveResponses": 93,
+            "negativeResponses": 0,
+            "gist": "Customers are satisfied with the appearance of the headphones. They mention that the design and looks are really good, classy, and eye catching. They also appreciate the minimalist design and case.",
+            "responses": [
+              "\"...Design & Build : The sleek, minimalist design of the SuperPods Dueto is both stylish and durable. They feel premium without the hefty price tag....\"",
+              "\"...And the mivi superpods design is very osm , and stylish. I feel good when I use this mivi superpods product. And I am very happy to buy this product....\"",
+              "\"The SuperPods Dueto flaunt an eye-catching gold design, making them stand out in the sea of earbuds....\"",
+              "\"...Product quality is very nice. Sound quality is very good. Colour is nice.\""
+            ]
+          },
+          {
+            "totalResponses": 53,
+            "positiveResponses": 50,
+            "negativeResponses": 3,
+            "gist": "Customers are satisfied with the fit of the headphones. They mention that the ear cushions provide a snug fit, making them a great addition to their listening. Some appreciate the bass and battery backup. Overall, most are happy with the product's fit and sound quality.",
+            "responses": [
+              "\"...They feel premium without the hefty price tag. The charging case is compact and fits easily in my pocket or bag....\"",
+              "\"...several hours of playback on a single charge, and the charging case is compact and convenient for carrying around....\"",
+              "\"...The earbuds themselves provide around 10 hours, and the compact charging case extends it to a whopping 60 hours....\"",
+              "\"...Performs great & Value for money. Very portable and fits perfectly. Go for it guys!!\""
+            ]
+          },
+          {
+            "totalResponses": 50,
+            "positiveResponses": 48,
+            "negativeResponses": 2,
+            "gist": "Customers like the comfort of the headphones. They say the earbud design is really comfortable and there is no pain or slipping off even during workouts. They also say the product is handy and durable which is comfortable to hold. Customers also say that the sound quality is superb, the battery backup is high, and the product has great support for the earmuff. They appreciate the stylish design and the premium feel.",
+            "responses": [
+              "\"...They combine top-notch audio performance, excellent comfort, and great value....\"",
+              "\"...SuperPods Dueto offer great value for money with their sound quality, comfort, and functionality.\"",
+              "\"...However, once you pop them in your ears, comfort takes center stage....\"",
+              "\"...The Earphones alone lasted almost 9 hrs.Earbud design is really comfortable and there is no pain or slipping off even during workouts....\""
+            ]
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "title": "Mivi SuperPods Dueto: Redefining True Wireless Excellence! 🌟🌟🌟🌟🌟",
+          "content": "I recently got my hands on the Mivi SuperPods Dueto, and they have truly exceeded my expectations in every way! As someone who values both audio quality and practicality, these earbuds are a game-changer. Sound Quality : The SuperPods Dueto deliver a rich, immersive audio experience. The clarity is exceptional, and the bass is deep without being overpowering. Whether I'm listening to music, watching movies, or taking calls, the sound quality is consistently superb.Comfort & Fit : These earbuds are designed for long-term comfort. They fit snugly and securely in my ears, making them perfect for workouts, commuting, or just relaxing at home. I barely notice them even after hours of use.Battery Life : The battery life is impressive. I can use the SuperPods Dueto for a full day without worrying about recharging. The case provides multiple additional charges, making it convenient for travel or long days out.Connectivity : Pairing the SuperPods Dueto with my devices was seamless. The Bluetooth connection is stable and strong, ensuring uninterrupted listening. The touch controls are intuitive and responsive, adding to the overall convenience.Design & Build : The sleek, minimalist design of the SuperPods Dueto is both stylish and durable. They feel premium without the hefty price tag. The charging case is compact and fits easily in my pocket or bag.Value for Money : Given their performance and features, the SuperPods Dueto offer incredible value. They rival high-end brands but at a fraction of the cost, making them an outstanding choice for budget-conscious audiophiles.Overall, Mivi has outdone themselves with the SuperPods Dueto. They combine top-notch audio performance, excellent comfort, and great value. I wholeheartedly recommend them to anyone in the market for a new pair of true wireless earbuds that are proudly made in India. Five stars well deserved! ⭐⭐⭐⭐⭐",
+          "rating": 5,
+          "reviewedBy": "S.M.Sarfaraz Ahamed",
+          "reviewDate": "2024-08-01T00:00:00.000Z"
+        },
+        {
+          "title": "Impressive Sound and Comfort",
+          "content": "I recently purchased the Mivi SuperPods Dueto earbuds from Amazon, and I'm quite impressed with their performance. The sound quality is excellent, with clear highs and deep bass that make listening to music enjoyable. The earbuds fit comfortably and securely in my ears, even during workouts or walks. The touch controls are responsive and easy to use, allowing me to adjust volume, change tracks, or take calls effortlessly. Battery life is impressive, providing several hours of playback on a single charge, and the charging case is compact and convenient for carrying around. Overall, the Mivi SuperPods Dueto offer great value for money with their sound quality, comfort, and functionality.",
+          "rating": 5,
+          "reviewedBy": "Suraj",
+          "reviewDate": "2024-09-06T00:00:00.000Z"
+        },
+        {
+          "title": "Excellent audio quality",
+          "content": "The SuperPods Dueto flaunt an eye-catching gold design, making them stand out in the sea of earbuds. The plastic build feels lightweight, but it’s not the sturdiest. However, once you pop them in your ears, comfort takes center stage. The silicone ear tips fit snugly, and the IPX4 rating ensures they can handle your sweatiest workouts. The touch controls are responsive, although they lack audible feedback.Now, let’s talk about what matters most: sound. These earbuds boast a dual-driver setup—a 6mm tweeter for crisp highs and a hefty 13mm woofer for satisfying bass. With support for AAC codec and Bluetooth v5.3, the audio quality is impressive. Vocals are clear, treble sparkles, and the bass has a decent punch. Whether you’re grooving to your favorite tunes or catching up on podcasts, the SuperPods Dueto won’t disappoint.Here’s where Mivi shines. The SuperPods Dueto offer an astounding 60 hours of playtime! Yes, you read that right. The earbuds themselves provide around 10 hours, and the compact charging case extends it to a whopping 60 hours. Plus, the Type-C charging port ensures faster top-ups.",
+          "rating": 5,
+          "reviewedBy": "Wilson",
+          "reviewDate": "2024-08-23T00:00:00.000Z"
+        },
+        {
+          "title": "Go for it !!",
+          "content": "Mivi is excellent. As I’ve using it for past 2 months, no cons in this buds. Rich bass, no delay while gaming & calls. Good charge backup. Performs great & Value for money. Very portable and fits perfectly. Go for it guys!!",
+          "rating": 5,
+          "reviewedBy": "Aishwarya",
+          "reviewDate": "2024-09-20T00:00:00.000Z"
+        },
+        {
+          "title": "Beautiful colour and high quality earbuds",
+          "content": "First of all I loved the colour so much but other than that this earbuds also has many benefits*Impressive Sound and Features in a Compact Package*I'm thoroughly impressed with the Mivi SuperPods Dueto, the latest offering from Mivi. These True Wireless Earbuds have set a new standard for sound quality and features in their class.*Sound Quality:*The dual drivers, comprising a 13mm woofer and 6mm tweeter, deliver an immersive 3D Soundstage that's unparalleled in this segment. The sound is crisp, clear, and balanced, making them perfect for music lovers and audiophiles alike.*Battery Life:*With up to 60 hours of playtime, you can enjoy your music or podcasts all day without worrying about running out of juice. The Type-C charger quickly tops up the battery, ensuring minimal downtime.The AI-powered ENC (Environmental Noise Cancellation) effectively blocks out background noise, while Bluetooth v5.3 ensures stable and seamless connectivity.Made in India:It's great to see a high-quality product designed and manufactured in India, showcasing the country's capabilities in the audio tech industry.The Mivi SuperPods Dueto is an excellent choice for anyone seeking exceptional sound, long battery life, and innovative features in a compact, true wireless earbud design. Highly recommended!",
+          "rating": 5,
+          "reviewedBy": "Anamika",
+          "reviewDate": "2024-08-17T00:00:00.000Z"
+        },
+        {
+          "title": "Audio quality at its peak",
+          "content": "The sound of the earphones are really to nice . Charges full in very less time and gives backup of 50 hours as claimed . Size of the earphones is pretty good , it also fits up easily in ears . Even on calls the it provide a great mic performance. It has very low latency in gaming so you don't miss a ammo while playing. Overall , i would say that the product is value for money , moreover due to dual drivers it provide more value for the money paid",
+          "rating": 5,
+          "reviewedBy": "Om Agrawal",
+          "reviewDate": "2024-08-28T00:00:00.000Z"
+        },
+        {
+          "title": "Nice product",
+          "content": "This product is very good. Product quality is very nice. Sound quality is very good. Colour is nice.",
+          "rating": 4,
+          "reviewedBy": "Yug choudhary",
+          "reviewDate": "2024-08-20T00:00:00.000Z"
+        },
+        {
+          "title": "Affordable and good TWS",
+          "content": "Bass , battery backup , fit and sound is really good .It has dual pairing also works good.if your budget under 2k you can buy.",
+          "rating": 5,
+          "reviewedBy": "Sabapathi",
+          "reviewDate": "2024-09-20T00:00:00.000Z"
+        }
+      ]
+    },
+    "otherDetails": {
+      "features": [
+        {
+          "key": "Dual Drivers",
+          "value": "Step into a more dynamic world where all the ranges of sound frequencies from low to high aren’t subpar anymore. Unfold extra power and definition with Hi-Lo Dual Drivers."
+        },
+        {
+          "key": "6mm Tweeter",
+          "value": "With precision and clarity in sound, low distortion and wide dispersion, experience the true magic of playback voice with a studio-quality listening experience all on your pair of ear buds."
+        },
+        {
+          "key": "3D Soundstage",
+          "value": "Feel the new depths of 3D Soundstage taking you deeper into the sound dimension with each instrument orchestrated for a deeper boost and richer treble. Such is the magic of this revolutionary pair of TWS earbuds."
+        },
+        {
+          "key": "Battery & Playtime",
+          "value": "It provides 8.5 Hrs of on-bud playtime and 50 Hrs of combined playtime. With just 10 minutes of charging, enjoy 500 minutes of playtime. The fast charge of these SuperPods comes with Type C charging."
+        }
+      ],
+      "technicalSpecifications": [],
+      "additionalInformations": []
+    }
+  }

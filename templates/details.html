@@ -1,15 +1,15 @@
 {%extends"base.html" %}
 {%block content%}
   <main>
-    
+    {{data}}
     <div class="product-container">
       <div class="product-image">
         <img
-          src="https://rukminim2.flixcart.com/image/416/416/xif0q/data-cable/usb-type-c-cable/a/k/b/zeb-cu3100v-usb-to-type-c-braided-cable-zebronics-original-imagp24aqtwtvwaf.jpeg?q=70"
+          src="{{data['images'][0]['original']}}"
           alt="EchoFlex Pro Headphones" width="500" height="500">
       </div>
       <div class="product-info">
-        <h1 class="product-title">{{data["name"][:35]}}...</h1>
+        <h1 class="product-title">{{data['title']}}...</h1>
         <div class="price-container">
           
           <p class="original-price">$299.99</p>
