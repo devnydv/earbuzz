@@ -38,7 +38,7 @@
 
   .page-heading {
     text-align: center;
-    padding: 1rem 0 2rem;
+    padding: 7rem 0.2rem 2rem 0.2rem;
     font-size: 2.5rem;
     color: var(--icon-color);
     text-transform: uppercase;
