@@ -1,7 +1,7 @@
 {%extends"base.html" %}
 {%block content%}
   <main>
-    {{data}}
+    
     <div class="product-container">
       <div class="product-image">
         <img
@@ -11,15 +11,21 @@
       <div class="product-info">
         <h1 class="product-title">{{data['title']}}...</h1>
         <div class="price-container">
-          
-          <p class="original-price">$299.99</p>
+          <p class="product-price">&#8377;{{data['price']}}</p>
+          <p class="original-price">&#8377;{{data['originalPrice']}}</p>
           <p class="discount-percentage">17% OFF</p>
         </div>
         <p class="product-rating">4.8 ★ (1,245 reviews)</p>
         <p class="product-description">Experience unparalleled audio clarity with the EchoFlex Pro. These adaptive
           noise-cancelling headphones are designed to deliver crystal-clear sound in any environment, making them
           perfect for audiophiles and professionals alike.</p>
+          <div class="button-container">
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            <button class="share-button" onclick="shareProduct()">Share</button>
+            <button class="buy-flipkart" onclick="buyFromFlipkart()">Buy from Flipkart</button>
+          </div>
         <div class="product-features">
+
           <h2>Key Features:</h2>
           <ul>
             <li>Advanced adaptive noise-cancellation technology</li>
@@ -32,11 +38,7 @@
             <li>Built-in microphone for clear voice calls</li>
           </ul>
         </div>
-        <div class="button-container">
-          <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
-          <button class="share-button" onclick="shareProduct()">Share</button>
-          <button class="buy-flipkart" onclick="buyFromFlipkart()">Buy from Flipkart</button>
-        </div>
+        
       </div>
     </div>
 
