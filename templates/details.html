@@ -1,48 +1,49 @@
-{%extends"base.html" %}
-{%block content%}
+
+  
+  {%extends"base.html" %}
+  {%block seo%}
+  <link rel="stylesheet" href="{{url_for('static', filename='css/newdetails.css')}}">
+  {% endblock %}
+  {%block content%}
+
   <main>
+    
     {% set features= alld['otherDetails']['features'] %}
     <div class="product-container">
-      <div class="product-image">
-        <img
+      <div class="product-image-container">
+        <img class="product-image"
           src="{{data['images'][0]['original']}}"
           alt="EchoFlex Pro Headphones" width="500" height="500">
+        <div class="button-container">
+          <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+          <button class="share-button" onclick="shareProduct()">Share</button>
+          <button class="buy-flipkart" onclick="buyFromFlipkart()">Buy from Flipkart</button>
+        </div>
       </div>
       <div class="product-info">
         <h1 class="product-title">{{data['title']}}...</h1>
         <div class="price-container">
-          <p class="product-price">&#8377;{{data['price']}}</p>
-          <p class="original-price">&#8377;{{data['originalPrice']}}</p>
+          <p class="product-price">$249.99</p>
+          <p class="original-price">$299.99</p>
           <p class="discount-percentage">17% OFF</p>
         </div>
-        <p class="product-rating">4.8 ★ (1,245 reviews)</p>
+        <p class="product-rating">★★★★★ 4.8 (1,245 reviews)</p>
         <p class="product-description">Experience unparalleled audio clarity with the EchoFlex Pro. These adaptive
           noise-cancelling headphones are designed to deliver crystal-clear sound in any environment, making them
           perfect for audiophiles and professionals alike.</p>
-          <div class="button-container">
-            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
-            <button class="share-button" onclick="shareProduct()">Share</button>
-            <button class="buy-flipkart" onclick="buyFromFlipkart()">Buy from Flipkart</button>
-          </div>
         <div class="product-features">
-
-          <h2>Key Features:</h2>
+          <h3>Key Features:</h3>
           <ul>
-            {% for feature in features:%}
-            
-            
-            <li><b>{{feature['key']}}</b>: {{feature['value']}}</li>
-            {%endfor%}
-            <!-- <li>High-resolution audio support</li>
+            <li>Advanced adaptive noise-cancellation technology</li>
+            <li>High-resolution audio support</li>
             <li>40mm neodymium drivers for powerful, balanced sound</li>
             <li>Bluetooth 5.2 with aptX HD codec support</li>
             <li>30-hour battery life with quick charging</li>
             <li>Comfortable over-ear design with memory foam ear cushions</li>
             <li>Touch controls for easy operation</li>
-            <li>Built-in microphone for clear voice calls</li> -->
+            <li>Built-in microphone for clear voice calls</li>
           </ul>
         </div>
-        
       </div>
     </div>
 
@@ -75,4 +76,30 @@
       </div>
     </section>
   </main>
-{% endblock%}
+
+  
+
+  <script>
+    function addToCart() {
+      alert('EchoFlex Pro has been added to your cart!');
+      // In a real implementation, this would add the item to the cart
+      // and update the cart icon/count in the navigation
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+
+    function shareProduct() {
+      // In a real implementation, this would open a share dialog
+      // with options to share on various social media platforms
+      alert('Share functionality coming soon!');
+    }
+
+    function buyFromFlipkart() {
+      // In a real implementation, this would redirect to the Flipkart product page
+      window.open('https://www.flipkart.com/audio-video/headphones/pr?sid=0pm,fcn&otracker=categorytree&p%5B%5D=facets.brand%255B%255D%3DAudioSynergy', '_blank');
+    }
+  </script>
+  {% endblock %}

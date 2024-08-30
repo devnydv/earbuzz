@@ -1,161 +1,79 @@
-<html>
-<head>
-  <!-- <base href="https://audiosynergyheadphones.com/product/echoflex-pro"> -->
-  <title>EchoFlex Pro - AudioSynergy</title>
-  <link rel="stylesheet" href="{{url_for('static', filename='css/newdetails.css')}}">
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div class="logo">AudioSynergy</div>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <ul id="menu">
-        <li><a href="https://audiosynergyheadphones.com/">Home</a></li>
-        <li><a href="https://audiosynergyheadphones.com/products">Products</a></li>
-        <li><a href="https://audiosynergyheadphones.com/about">About</a></li>
-        <li><a href="https://audiosynergyheadphones.com/contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    {% set features= alld['otherDetails']['features'] %}
-    <div class="product-container">
-      <div class="product-image-container">
-        <img class="product-image"
-          src="{{data['images'][0]['original']}}"
-          alt="EchoFlex Pro Headphones" width="500" height="500">
-        <div class="button-container">
-          <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
-          <button class="share-button" onclick="shareProduct()">Share</button>
-          <button class="buy-flipkart" onclick="buyFromFlipkart()">Buy from Flipkart</button>
-        </div>
+{%extends"base.html" %}
+{%block seo%}
+  <link rel="stylesheet" href="{{url_for('static', filename='css/details.css')}}">
+  {% endblock %}
+{%block content%}
+<main>
+  {% set features= alld['otherDetails']['features'] %}
+  <div class="product-container">
+    <div class="product-image">
+      <img src="{{data['images'][0]['original']}}" alt="EchoFlex Pro Headphones" width="500" height="500">
+    </div>
+    <div class="product-info">
+      <h1 class="product-title">{{data['title']}}...</h1>
+      <div class="price-container">
+        <p class="product-price">&#8377;{{data['price']}}</p>
+        <p class="original-price">&#8377;{{data['originalPrice']}}</p>
+        <p class="discount-percentage">17% OFF</p>
       </div>
-      <div class="product-info">
-        <h1 class="product-title">{{data['title']}}...</h1>
-        <div class="price-container">
-          <p class="product-price">$249.99</p>
-          <p class="original-price">$299.99</p>
-          <p class="discount-percentage">17% OFF</p>
-        </div>
-        <p class="product-rating">★★★★★ 4.8 (1,245 reviews)</p>
-        <p class="product-description">Experience unparalleled audio clarity with the EchoFlex Pro. These adaptive
-          noise-cancelling headphones are designed to deliver crystal-clear sound in any environment, making them
-          perfect for audiophiles and professionals alike.</p>
-        <div class="product-features">
-          <h3>Key Features:</h3>
-          <ul>
-            <li>Advanced adaptive noise-cancellation technology</li>
-            <li>High-resolution audio support</li>
+      <p class="product-rating">4.8 ★ (1,245 reviews)</p>
+      <p class="product-description">Experience unparalleled audio clarity with the EchoFlex Pro. These adaptive
+        noise-cancelling headphones are designed to deliver crystal-clear sound in any environment, making them
+        perfect for audiophiles and professionals alike.</p>
+      <div class="button-container">
+        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        <button class="share-button" onclick="shareProduct()">Share</button>
+        <button class="buy-flipkart" onclick="buyFromFlipkart()">Buy from Flipkart</button>
+      </div>
+      <div class="product-features">
+
+        <h2>Key Features:</h2>
+        <ul>
+          {% for feature in features:%}
+
+
+          <li><b>{{feature['key']}}</b>: {{feature['value']}}</li>
+          {%endfor%}
+          <!-- <li>High-resolution audio support</li>
             <li>40mm neodymium drivers for powerful, balanced sound</li>
             <li>Bluetooth 5.2 with aptX HD codec support</li>
             <li>30-hour battery life with quick charging</li>
             <li>Comfortable over-ear design with memory foam ear cushions</li>
             <li>Touch controls for easy operation</li>
-            <li>Built-in microphone for clear voice calls</li>
-          </ul>
-        </div>
+            <li>Built-in microphone for clear voice calls</li> -->
+        </ul>
       </div>
+
     </div>
+  </div>
 
-    <section class="reviews">
-      <h2>Customer Reviews</h2>
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">John D.</span>
-          <span class="review-rating">★★★★★</span>
-        </div>
-        <p class="review-content">These headphones are amazing! The sound quality is outstanding, and the
-          noise-cancellation is top-notch. I use them for both work and leisure, and they never disappoint.</p>
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review">
+      <div class="review-header">
+        <span class="review-author">John D.</span>
+        <span class="review-rating">★★★★★</span>
       </div>
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">Sarah M.</span>
-          <span class="review-rating">★★★★☆</span>
-        </div>
-        <p class="review-content">Great sound and comfortable to wear for long periods. The battery life is impressive.
-          The only minor issue is that they're a bit bulky for travel, but the sound quality makes up for it.</p>
-      </div>
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">Alex T.</span>
-          <span class="review-rating">★★★★★</span>
-        </div>
-        <p class="review-content">As an audio engineer, I'm very picky about my headphones. The EchoFlex Pro exceeded my
-          expectations. The clarity and balance across all frequencies are exceptional. Highly recommended for
-          professionals.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Shop</h3>
-        <ul>
-          <li><a href="https://audiosynergyheadphones.com/wireless-earbuds">Wireless Earbuds</a></li>
-          <li><a href="https://audiosynergyheadphones.com/over-ear-headphones">Over-Ear Headphones</a></li>
-          <li><a href="https://audiosynergyheadphones.com/in-ear-headphones">In-Ear Headphones</a></li>
-          <li><a href="https://audiosynergyheadphones.com/studio-headphones">Studio Headphones</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Support</h3>
-        <ul>
-          <li><a href="https://audiosynergyheadphones.com/faq">FAQ</a></li>
-          <li><a href="https://audiosynergyheadphones.com/shipping">Shipping</a></li>
-          <li><a href="https://audiosynergyheadphones.com/returns">Returns</a></li>
-          <li><a href="https://audiosynergyheadphones.com/contact">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="https://audiosynergyheadphones.com/about">About Us</a></li>
-          <li><a href="https://audiosynergyheadphones.com/careers">Careers</a></li>
-          <li><a href="https://audiosynergyheadphones.com/press">Press</a></li>
-          <li><a href="https://audiosynergyheadphones.com/privacy">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Connect</h3>
-        <ul>
-          <li><a href="https://facebook.com/audiosynergy">Facebook</a></li>
-          <li><a href="https://twitter.com/audiosynergy">Twitter</a></li>
-          <li><a href="https://instagram.com/audiosynergy">Instagram</a></li>
-          <li><a href="https://youtube.com/audiosynergy">YouTube</a></li>
-        </ul>
-      </div>
+      <p class="review-content">These headphones are amazing! The sound quality is outstanding, and the
+        noise-cancellation is top-notch. I use them for both work and leisure, and they never disappoint.</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2023 AudioSynergy. All rights reserved.</p>
+    <div class="review">
+      <div class="review-header">
+        <span class="review-author">Sarah M.</span>
+        <span class="review-rating">★★★★☆</span>
+      </div>
+      <p class="review-content">Great sound and comfortable to wear for long periods. The battery life is impressive.
+        The only minor issue is that they're a bit bulky for travel, but the sound quality makes up for it.</p>
     </div>
-  </footer>
-
-  <script>
-    function addToCart() {
-      alert('EchoFlex Pro has been added to your cart!');
-      // In a real implementation, this would add the item to the cart
-      // and update the cart icon/count in the navigation
-    }
-
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('show');
-    }
-
-    function shareProduct() {
-      // In a real implementation, this would open a share dialog
-      // with options to share on various social media platforms
-      alert('Share functionality coming soon!');
-    }
-
-    function buyFromFlipkart() {
-      // In a real implementation, this would redirect to the Flipkart product page
-      window.open('https://www.flipkart.com/audio-video/headphones/pr?sid=0pm,fcn&otracker=categorytree&p%5B%5D=facets.brand%255B%255D%3DAudioSynergy', '_blank');
-    }
-  </script>
-</body>
-
-</html>
+    <div class="review">
+      <div class="review-header">
+        <span class="review-author">Alex T.</span>
+        <span class="review-rating">★★★★★</span>
+      </div>
+      <p class="review-content">As an audio engineer, I'm very picky about my headphones. The EchoFlex Pro exceeded my
+        expectations. The clarity and balance across all frequencies are exceptional. Highly recommended for
+        professionals.</p>
+    </div>
+  </section>
+</main>
+{% endblock%}
