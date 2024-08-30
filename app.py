@@ -28,6 +28,11 @@ def detail():
     #details = detailsdata()
     return render_template("details.html", data= pdetails, alld = details)
 
+@app.route("/newdetails") 
+def newdetail():
+    #details = detailsdata()
+    return render_template("detailsnew.html", data= pdetails, alld = details)
+
 
 if __name__== "__main__":
     app.run(debug=True)
