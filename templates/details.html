@@ -1,7 +1,7 @@
 {%extends"base.html" %}
 {%block content%}
   <main>
-    
+    {% set features= alld['otherDetails']['features'] %}
     <div class="product-container">
       <div class="product-image">
         <img
@@ -28,14 +28,18 @@
 
           <h2>Key Features:</h2>
           <ul>
-            <li>Advanced adaptive noise-cancellation technology</li>
-            <li>High-resolution audio support</li>
+            {% for feature in features:%}
+            
+            
+            <li><b>{{feature['key']}}</b>: {{feature['value']}}</li>
+            {%endfor%}
+            <!-- <li>High-resolution audio support</li>
             <li>40mm neodymium drivers for powerful, balanced sound</li>
             <li>Bluetooth 5.2 with aptX HD codec support</li>
             <li>30-hour battery life with quick charging</li>
             <li>Comfortable over-ear design with memory foam ear cushions</li>
             <li>Touch controls for easy operation</li>
-            <li>Built-in microphone for clear voice calls</li>
+            <li>Built-in microphone for clear voice calls</li> -->
           </ul>
         </div>
         
