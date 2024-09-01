@@ -8,53 +8,49 @@
   </section> -->
 
   <section class="categories">
-    <a href="/">
+    <a href="/tws">
       <div class="category ">TWS</div>
     </a>
-    <a href="/">
+    <a href="/over-ear-headphones">
       <div class="category">Over-Ear Headphones</div>
     </a>
-    <a href="/">
-      <div class="category">In-Ear Headphones</div>
-    </a>
-    <a href="/">
+    
+    <a href="/wired+earphones">
       <div class="category">Wired Earphones</div>
     </a>
-    <a href="/">
+    <a href="/studio-headphones">
       <div class="category">Studio Headphones</div>
     </a>
-    <a href="/">
-      <div class="category">Studio Headphones</div>
-    </a>
-    <a href="/">
+    
+    <a href="/neckband">
       <div class="category">Neckbands</div>
     </a>
   </section>
-
-
+  
   <section class="products">
-    {%for item in range(12)%}
-    {% set disc = (data[item]['price']/ data[item]['originalPrice']) *100%}
+    {%for item in data%}
+    
+    {% set disc = (item['price']/ item['originalPrice']) *100%}
 
     <div class="product">
       <a href="/details">
-        <img src="{{data[item]['image']['original']}}" alt="SonicWave Pro" width="250" height="250">
+        <img src="{{item['image']['original']}}" alt="SonicWave Pro" width="250" height="250">
         <div class="product-info">
-          <h3>{{data[item].title}}</h3>
-          <span class="price">₹ {{data[item].price}}</span>
+          <h3>{{item.title}}</h3>
+          <span class="price">₹ {{item.price}}</span>
         </div>
-        <div class="review-card">{{data[item].starRating}} ★</div>
+        <div class="review-card">{{item.starRating}} ★</div>
         <div class="discount">{{disc | int}}%</div>
       </a>
     </div>
     {%endfor%}
   </section>
 
-  <a href="/products" class="view-more">View More Products</a>
+  <!-- <a href="/products" class="view-more">View More Products</a> -->
 
 
 
-  <!-- <a href="/products.html" class="view-more">View More Products</a> -->
+  
 
   <section class="reviews">
     <h1>EarBuzz - Buy the best earphones</h1>

@@ -1,118 +1,132 @@
 {%extends"base.html" %}
 {%block content%}
 
-  
-  <main>
 
-    <section class="reviews">
-      <p class="head2">Featured Buzz</p>
-    </section>
+<main>
 
-    <section class="categories">
-      <a href="/">
-        <div class="category ">TWS</div>
-      </a>
-      <a href="/">
-        <div class="category">Over-Ear Headphones</div>
-      </a>
-      <a href="/">
-        <div class="category">In-Ear Headphones</div>
-      </a>
-      <a href="/">
-        <div class="category">Wired Earphones</div>
-      </a>
-      <a href="/">
-        <div class="category">Studio Headphones</div>
-      </a>
-      <a href="/">
-        <div class="category">Studio Headphones</div>
-      </a>
-      <a href="/">
-        <div class="category">Neckbands</div>
-      </a>
-    </section>
+  <section class="reviews">
+    <p class="head2">Featured Buzz</p>
+  </section>
+
+  <section class="categories">
+    <a href="/tws">
+      <div class="category ">TWS</div>
+    </a>
+    <a href="/over-ear-headphones">
+      <div class="category">Over-Ear Headphones</div>
+    </a>
+    
+    <a href="/wired+earphones">
+      <div class="category">Wired Earphones</div>
+    </a>
+    <a href="/studio-headphones">
+      <div class="category">Studio Headphones</div>
+    </a>
+    
+    <a href="/neckbands">
+      <div class="category">Neckbands</div>
+    </a>
+  </section>
 
 
 
+  <section class="products">
+    {%for item in data%}
+    
+    {% set disc = (item['price']/ item['originalPrice']) *100%}
 
-    <section class="products">
-      <div class="product">
-        <img
-          src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-          alt="TechnoBeats Pro" width="250" height="250">
+    <div class="product">
+      <a href="/details">
+        <img src="{{item['image']['original']}}" alt="SonicWave Pro" width="250" height="250">
         <div class="product-info">
-          <h3>TechnoBeats Pro</h3>
-          <span class="price">$179.99</span>
+          <h3>{{item.title}}</h3>
+          <span class="price">₹ {{item.price}}</span>
         </div>
-        <div class="review-card">4.6 ★</div>
-        <div class="discount">-12%</div>
-      </div>
-      <div class="product">
-        <img
-          src="https://images.unsplash.com/photo-1606400082777-ef05f3c5cde2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
-          alt="Harmony X1" width="250" height="250">
-        <div class="product-info">
-          <h3>Harmony X1</h3>
-          <span class="price">299.99</span>
-        </div>
-        <div class="review-card">4.8 ★</div>
-        <div class="discount">-8%</div>
-      </div>
-      <div class="product">
-        <img
-          src="https://rukminim2.flixcart.com/image/416/416/xif0q/data-cable/usb-type-c-cable/a/k/b/zeb-cu3100v-usb-to-type-c-braided-cable-zebronics-original-imagp24aqtwtvwaf.jpeg?q=70"
-          alt="EchoWave Lite" width="250" height="250">
-        <div class="product-info">
-          <h3>EchoWave Lite</h3>
-          <span class="price">$89.99</span>
-        </div>
-        <div class="review-card">4.3 ★</div>
-        <div class="discount">-25%</div>
-      </div>
-      <div class="product">
+        <div class="review-card">{{item.starRating}} ★</div>
+        <div class="discount">{{disc | int}}%</div>
+      </a>
+    </div>
+    {%endfor%}
+  </section>
+  <!-- <section class="products">
 
-        <img
-          src="https://rukminim2.flixcart.com/image/416/416/kxhvf680/mouse/d/1/p/toad-14-portronics-original-imag9xnpexundzez.jpeg?q=70"
-          alt="PulseFit Sport" width="250" height="250">
-        <div class="product-info">
-          <h3>PulseFit Sport</h3>
-          <span class="price">$149.99</span>
-        </div>
-        <div class="review-card">4.7 ★</div>
-        <div class="discount">-18%</div>
+    <div class="product">
+      <img
+        src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+        alt="TechnoBeats Pro" width="250" height="250">
+      <div class="product-info">
+        <h3>TechnoBeats Pro</h3>
+        <span class="price">$179.99</span>
       </div>
-    </section>
+      <div class="review-card">4.6 ★</div>
+      <div class="discount">-12%</div>
+    </div>
+    <div class="product">
+      <img
+        src="https://images.unsplash.com/photo-1606400082777-ef05f3c5cde2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+        alt="Harmony X1" width="250" height="250">
+      <div class="product-info">
+        <h3>Harmony X1</h3>
+        <span class="price">299.99</span>
+      </div>
+      <div class="review-card">4.8 ★</div>
+      <div class="discount">-8%</div>
+    </div>
+    <div class="product">
+      <img
+        src="https://rukminim2.flixcart.com/image/416/416/xif0q/data-cable/usb-type-c-cable/a/k/b/zeb-cu3100v-usb-to-type-c-braided-cable-zebronics-original-imagp24aqtwtvwaf.jpeg?q=70"
+        alt="EchoWave Lite" width="250" height="250">
+      <div class="product-info">
+        <h3>EchoWave Lite</h3>
+        <span class="price">$89.99</span>
+      </div>
+      <div class="review-card">4.3 ★</div>
+      <div class="discount">-25%</div>
+    </div>
+    <div class="product">
 
-    <button class="load-more">Load More</button>
+      <img
+        src="https://rukminim2.flixcart.com/image/416/416/kxhvf680/mouse/d/1/p/toad-14-portronics-original-imag9xnpexundzez.jpeg?q=70"
+        alt="PulseFit Sport" width="250" height="250">
+      <div class="product-info">
+        <h3>PulseFit Sport</h3>
+        <span class="price">$149.99</span>
+      </div>
+      <div class="review-card">4.7 ★</div>
+      <div class="discount">-18%</div>
+    </div>
+  </section> -->
 
-    <section class="reviews">
-      <h2>Customer Reviews</h2>
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">John D.</span>
-          <span class="review-rating">★★★★★</span>
-        </div>
-        <p class="review-content">These headphones are amazing! The sound quality is outstanding, and the
-          noise-cancellation is top-notch. I use them for both work and leisure, and they never disappoint.</p>
-      </div>
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">Sarah M.</span>
-          <span class="review-rating">★★★★☆</span>
-        </div>
-        <p class="review-content">Great sound and comfortable to wear for long periods. The battery life is impressive.
-          The only minor issue is that they're a bit bulky for travel, but the sound quality makes up for it.</p>
-      </div>
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">Alex T.</span>
-          <span class="review-rating">★★★★★</span>
-        </div>
-        <p class="review-content">As an audio engineer, I'm very picky about my headphones. The EchoFlex Pro exceeded my
-          expectations. The clarity and balance across all frequencies are exceptional. Highly recommended for
-          professionals.</p>
-      </div>
-    </section>
-  </main>
+  <!-- <button class="load-more">Load More</button> -->
 
-  {%endblock%}
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review">
+      <div class="review-header">
+        <span class="review-author">John D.</span>
+        <span class="review-rating">★★★★★</span>
+      </div>
+      <p class="review-content">These headphones are amazing! The sound quality is outstanding, and the
+        noise-cancellation is top-notch. I use them for both work and leisure, and they never disappoint.</p>
+    </div>
+    <div class="review">
+      <div class="review-header">
+        <span class="review-author">Sarah M.</span>
+        <span class="review-rating">★★★★☆</span>
+      </div>
+      <p class="review-content">Great sound and comfortable to wear for long periods. The battery life is impressive.
+        The only minor issue is that they're a bit bulky for travel, but the sound quality makes up for it.</p>
+    </div>
+    <div class="review">
+      <div class="review-header">
+        <span class="review-author">Alex T.</span>
+        <span class="review-rating">★★★★★</span>
+      </div>
+      <p class="review-content">As an audio engineer, I'm very picky about my headphones. The EchoFlex Pro exceeded my
+        expectations. The clarity and balance across all frequencies are exceptional. Highly recommended for
+        professionals.</p>
+    </div>
+  </section>
+</main>
+
+{%endblock%}
