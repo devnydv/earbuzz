@@ -2,3 +2,4 @@ Flask==3.0.3
 bs4
 requests
 gunicorn
+pymongo
