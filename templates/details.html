@@ -41,11 +41,11 @@
           noise-cancelling headphones are designed to deliver crystal-clear sound in any environment, making them
           perfect for audiophiles and professionals alike.</p>
         <div class="product-features"> -->
-          <h3>Key Features:</h3>
+          <h2>Key Features:</h2>
           <ul>
             {% for ftr in features%}
-            <li><b>{{ftr.key}}:</b> {{ftr.value}}</li>
-            
+            <li><b>{{ftr['key'].replace('[', '').replace(']', '')}}:</b> {{ftr.value}}</li>
+             
             {%endfor%}
           </ul>
         </div>
