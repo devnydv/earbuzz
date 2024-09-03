@@ -8,12 +8,14 @@
 
   <main>
     
-    {% set features= alld['otherDetails']['features'] %}
+    {% set features= alld[0]['otherDetails']['features'] %}
+    {% set productDetails= alld[0]['productDetails'] %}
+    
     <div class="product-container">
       <div class="product-image-container">
         <img class="product-image"
-          src="{{data['images'][0]['original']}}"
-          alt="EchoFlex Pro Headphones" width="500" height="500">
+          src="{{productDetails['images'][0]['original']}}"
+          alt="{{productDetails['title']}}..." width="500" height="500">
         <div class="button-container">
           <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
           <button class="share-button" onclick="shareProduct()">Share</button>
@@ -21,10 +23,10 @@
         </div>
       </div>
       <div class="product-info">
-        <h1 class="product-title">{{data['title']}}...</h1>
+        <h1 class="product-title">{{productDetails['title']}}...</h1>
         <div class="price-container">
-          <p class="product-price">$249.99</p>
-          <p class="original-price">$299.99</p>
+          <p class="product-price">₹{{productDetails['price']}}</p>
+          <p class="original-price">₹{{productDetails['originalPrice']}}</p>
           <p class="discount-percentage">17% OFF</p>
         </div>
         <p class="product-rating">★★★★★ 4.8 (1,245 reviews)</p>

@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for
 import json
-from db import inddata, catdata
+from db import inddata, catdata, itemdetails
 
 app = Flask(__name__)
 f = open("amazon.json", "r")
@@ -25,20 +25,19 @@ def product(cat):
     catd = catdata(cat)
     
     if catd != []:
-        return render_template("products.html", data = catd )
+        return render_template("products.html", data = catd, catname = cat)
     else:
         return redirect(url_for('error_404'))
         
 
-@app.route("/details") 
-def detail():
-    #details = detailsdata()
-    return render_template("details.html", data= pdetails, alld = details)
+@app.route("/<cat>/<itemid>") 
+def detail(cat , itemid):
+    details = itemdetails(itemid)
+    
+    
+    return render_template("details.html",  alld = details)
 
-@app.route("/newdetails") 
-def newdetail():
-    #details = detailsdata()
-    return render_template("detailsnew.html", data= pdetails, alld = details)
+
 
 # Error handling
 

@@ -15,7 +15,7 @@
       <div class="category">Over-Ear Headphones</div>
     </a>
     
-    <a href="/wired+earphones">
+    <a href="/wired-earphones">
       <div class="category">Wired Earphones</div>
     </a>
     <a href="/studio-headphones">
@@ -33,7 +33,7 @@
     {% set disc = (item['price']/ item['originalPrice']) *100%}
 
     <div class="product">
-      <a href="/details">
+      <a href="/{{item['cat']}}/{{item['id']}}">
         <img src="{{item['image']['original']}}" alt="SonicWave Pro" width="250" height="250">
         <div class="product-info">
           <h3>{{item.title}}</h3>

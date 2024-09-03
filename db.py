@@ -15,3 +15,7 @@ def catdata(cat):
     filtered = list(collection.find({"cat": cat}))
     return filtered
 
+def itemdetails(id):
+    details = list(detailsdb.find({"id": id}))
+    return details
+
