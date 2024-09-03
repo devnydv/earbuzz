@@ -1,25 +1,32 @@
 
   
   {%extends"base.html" %}
+
+  {% set features= alld[0]['otherDetails']['features'] %}
+  {% set productDetails= alld[0]['productDetails'] %}
+  {% set ratingReview= alld[0]['ratingReview'] %}
+  {% set review= alld[0]['ratingReview']['reviews'] %}
+
   {%block seo%}
+  <title>{{productDetails['title'] [:55]}}</title>
   <link rel="stylesheet" href="{{url_for('static', filename='css/details.css')}}">
   {% endblock %}
   {%block content%}
 
   <main>
     
-    {% set features= alld[0]['otherDetails']['features'] %}
-    {% set productDetails= alld[0]['productDetails'] %}
-    
+   
+
+    {% set disc = ( productDetails['originalPrice']- productDetails['price']) / productDetails['originalPrice'] *100%}
     <div class="product-container">
       <div class="product-image-container">
         <img class="product-image"
           src="{{productDetails['images'][0]['original']}}"
           alt="{{productDetails['title']}}..." width="500" height="500">
         <div class="button-container">
-          <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+          <!-- <button class="add-to-cart" onclick="addToCart()">Wishlist</button> -->
           <button class="share-button" onclick="shareProduct()">Share</button>
-          <button class="buy-flipkart" onclick="buyFromFlipkart()">Buy from Flipkart</button>
+          <button class="buy-flipkart" onclick="buyFromFlipkart()">Buy from Amazon</button>
         </div>
       </div>
       <div class="product-info">
@@ -27,23 +34,19 @@
         <div class="price-container">
           <p class="product-price">₹{{productDetails['price']}}</p>
           <p class="original-price">₹{{productDetails['originalPrice']}}</p>
-          <p class="discount-percentage">17% OFF</p>
+          <p class="discount-percentage">{{disc | int}}% OFF</p>
         </div>
-        <p class="product-rating">★★★★★ 4.8 (1,245 reviews)</p>
-        <p class="product-description">Experience unparalleled audio clarity with the EchoFlex Pro. These adaptive
+        <p class="product-rating">★★★★★ {{ratingReview['starRating']}} ({{ratingReview['totalRatings']}} reviews)</p>
+        <!-- <p class="product-description">Experience unparalleled audio clarity with the EchoFlex Pro. These adaptive
           noise-cancelling headphones are designed to deliver crystal-clear sound in any environment, making them
           perfect for audiophiles and professionals alike.</p>
-        <div class="product-features">
+        <div class="product-features"> -->
           <h3>Key Features:</h3>
           <ul>
-            <li>Advanced adaptive noise-cancellation technology</li>
-            <li>High-resolution audio support</li>
-            <li>40mm neodymium drivers for powerful, balanced sound</li>
-            <li>Bluetooth 5.2 with aptX HD codec support</li>
-            <li>30-hour battery life with quick charging</li>
-            <li>Comfortable over-ear design with memory foam ear cushions</li>
-            <li>Touch controls for easy operation</li>
-            <li>Built-in microphone for clear voice calls</li>
+            {% for ftr in features%}
+            <li><b>{{ftr.key}}:</b> {{ftr.value}}</li>
+            
+            {%endfor%}
           </ul>
         </div>
       </div>
@@ -51,31 +54,17 @@
 
     <section class="reviews">
       <h2>Customer Reviews</h2>
+      {%for rvs in review%}
       <div class="review">
         <div class="review-header">
-          <span class="review-author">John D.</span>
-          <span class="review-rating">★★★★★</span>
+          <span class="review-author">{{rvs['reviewedBy']}}</span>
+          <!-- <span class="review-rating">★★★★★</span> -->
+          <span class="review-rating">{{rvs['rating']}} ★</span>
         </div>
-        <p class="review-content">These headphones are amazing! The sound quality is outstanding, and the
-          noise-cancellation is top-notch. I use them for both work and leisure, and they never disappoint.</p>
+        <p class="review-content">{{rvs['content']}}</p>
       </div>
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">Sarah M.</span>
-          <span class="review-rating">★★★★☆</span>
-        </div>
-        <p class="review-content">Great sound and comfortable to wear for long periods. The battery life is impressive.
-          The only minor issue is that they're a bit bulky for travel, but the sound quality makes up for it.</p>
-      </div>
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">Alex T.</span>
-          <span class="review-rating">★★★★★</span>
-        </div>
-        <p class="review-content">As an audio engineer, I'm very picky about my headphones. The EchoFlex Pro exceeded my
-          expectations. The clarity and balance across all frequencies are exceptional. Highly recommended for
-          professionals.</p>
-      </div>
+      {%endfor%}
+      
     </section>
   </main>
 

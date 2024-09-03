@@ -1,4 +1,9 @@
 {%extends"base.html" %}
+
+
+{%block seo%}
+<title>Earbuzz - Premium {{catname}} for Audiophiles</title>
+{%endblock%}
 {%block content%}
 
 
@@ -33,7 +38,7 @@
   <section class="products">
     {%for item in data%}
     
-    {% set disc = (item['price']/ item['originalPrice']) *100%}
+    {% set disc = (item['originalPrice'] - item['price'])/ item['originalPrice'] *100%}
 
     <div class="product">
       <a href="/{{item['cat']}}/{{item['id']}}">

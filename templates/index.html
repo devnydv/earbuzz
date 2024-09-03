@@ -1,4 +1,9 @@
 {%extends"base.html" %}
+
+{%block seo%}
+<title>Earbuzz - Premium Earphones for Audiophiles</title>
+<meta name="description" content="Buy amazing earphones with earbuzz make your audio journey amazing and enjoyable.">
+{%endblock%}
 {%block content%}
 
 <main>
@@ -14,23 +19,23 @@
     <a href="/over-ear-headphones">
       <div class="category">Over-Ear Headphones</div>
     </a>
-    
+
     <a href="/wired-earphones">
       <div class="category">Wired Earphones</div>
     </a>
     <a href="/studio-headphones">
       <div class="category">Studio Headphones</div>
     </a>
-    
+
     <a href="/neckband">
       <div class="category">Neckbands</div>
     </a>
   </section>
-  
+
   <section class="products">
     {%for item in data%}
-    
-    {% set disc = (item['price']/ item['originalPrice']) *100%}
+
+    {% set disc = (item['originalPrice'] - item['price'])/ item['originalPrice'] *100%}
 
     <div class="product">
       <a href="/{{item['cat']}}/{{item['id']}}">
@@ -50,10 +55,10 @@
 
 
 
-  
+
 
   <section class="reviews">
-    <h1>EarBuzz - Buy the best earphones</h1>
+    <h2>EarBuzz - Buy the best earphones</h2>
     <div class="review">
       <div class="review-header">
         <!-- <span class="review-author">John D.</span>

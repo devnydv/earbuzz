@@ -268,6 +268,11 @@
 
   .review-content {
     font-size: 0.9rem;
+    display: -webkit-box;
+    line-clamp: 8;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   footer {
