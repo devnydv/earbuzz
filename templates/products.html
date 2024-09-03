@@ -8,10 +8,8 @@
 
 
 <main>
-
-  <section class="reviews">
-    <p class="head2">Grab the Best {{catname}}</p>
-  </section>
+  <h1 class="page-heading">Grab the Best {{catname}}</h1>
+  
 
   <section class="categories">
     <a href="/tws">
@@ -44,7 +42,7 @@
       <a href="/{{item['cat']}}/{{item['id']}}">
         <img src="{{item['image']['original']}}" alt="SonicWave Pro" width="250" height="250">
         <div class="product-info">
-          <h3>{{item.title}}</h3>
+          <h2>{{item.title}}</h2>
           <span class="price">₹ {{item.price}}</span>
         </div>
         <div class="review-card">{{item.starRating}} ★</div>
@@ -105,7 +103,7 @@
   <!-- <button class="load-more">Load More</button> -->
 
   <section class="reviews">
-    <h2>Customer Reviews</h2>
+    <h3>Customer Reviews</h3>
     <div class="review">
       <div class="review-header">
         <span class="review-author">John D.</span>

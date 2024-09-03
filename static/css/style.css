@@ -165,7 +165,7 @@
     padding: 1.5rem;
   }
 
-  .product-info h3 {
+  .product-info h2 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: var(--icon-color);
@@ -259,7 +259,7 @@
     padding: 2rem 5%;
   }
 
-  .reviews h1 {
+  .reviews h3 {
     font-size: 1.8rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
