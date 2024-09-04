@@ -87,6 +87,7 @@
               if (navigator.share) {
                   navigator.share({
                       title: "Check out {{productDetails['title']}}",
+                      text: "Check out {{productDetails['title']}}",
                       url: url
                   }).then(() => {
                       console.log('Thanks for sharing!');
