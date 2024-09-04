@@ -1,97 +1,116 @@
+{%extends"base.html" %}
 
-  
-  {%extends"base.html" %}
+{% set features= alld[0]['otherDetails']['features'] %}
+{% set productDetails= alld[0]['productDetails'] %}
+{% set ratingReview= alld[0]['ratingReview'] %}
+{% set review= alld[0]['ratingReview']['reviews'] %}
 
-  {% set features= alld[0]['otherDetails']['features'] %}
-  {% set productDetails= alld[0]['productDetails'] %}
-  {% set ratingReview= alld[0]['ratingReview'] %}
-  {% set review= alld[0]['ratingReview']['reviews'] %}
+{%block seo%}
+<title>{{productDetails['title'] [:55]}}</title>
+<link rel="stylesheet" href="{{url_for('static', filename='css/details.css')}}">
+<meta name="description" content="Buy {{productDetails['title'] [:100]}}">
+{% endblock %}
+{%block content%}
 
-  {%block seo%}
-  <title>{{productDetails['title'] [:55]}}</title>
-  <link rel="stylesheet" href="{{url_for('static', filename='css/details.css')}}">
-  <meta name="description" content="Buy {{productDetails['title'] [:100]}}">
-  {% endblock %}
-  {%block content%}
+<main>
 
-  <main>
-    
-   
 
-    {% set disc = ( productDetails['originalPrice']- productDetails['price']) / productDetails['originalPrice'] *100%}
-    <div class="product-container">
-      <div class="product-image-container">
-        <img class="product-image"
-          src="{{productDetails['images'][0]['original']}}"
-          alt="{{productDetails['title']}}..." width="500" height="500">
-        <div class="button-container">
-          <!-- <button class="add-to-cart" onclick="addToCart()">Wishlist</button> -->
-          <button class="share-button" onclick="shareProduct()">Share</button>
-          <button class="buy-flipkart" ><a href="{{productDetails['productLink']}}?th=1&tag=devnydv0a-2" target="_blank">Buy from Amazon</a></button>
-        </div>
-      </div>
-      <div class="product-info">
-        <h1 class="product-title">{{productDetails['title']}}...</h1>
-        <div class="price-container">
-          <p class="product-price">₹{{productDetails['price']}}</p>
-          <p class="original-price">₹{{productDetails['originalPrice']}}</p>
-          <p class="discount-percentage">{{disc | int}}% OFF</p>
-        </div>
-        <p class="product-rating">★★★★★ {{ratingReview['starRating']}} ({{ratingReview['totalRatings']}} reviews)</p>
-        <!-- <p class="product-description">Experience unparalleled audio clarity with the EchoFlex Pro. These adaptive
-          noise-cancelling headphones are designed to deliver crystal-clear sound in any environment, making them
-          perfect for audiophiles and professionals alike.</p>
-        <div class="product-features"> -->
-          <h2>Key Features:</h2>
-          <ul>
-            {% for ftr in features%}
-            <li><b>{{ftr['key'].replace('[', '').replace(']', '')}}:</b> {{ftr.value}}</li>
-             
-            {%endfor%}
-          </ul>
-        </div>
+
+  {% set disc = ( productDetails['originalPrice']- productDetails['price']) / productDetails['originalPrice'] *100%}
+  <div class="product-container">
+    <div class="product-image-container">
+      <img class="product-image" src="{{productDetails['images'][0]['original']}}" alt="{{productDetails['title']}}..."
+        width="500" height="500">
+      <div class="button-container">
+        <!-- <button class="add-to-cart" onclick="addToCart()">Wishlist</button> -->
+        <button class="share-button" onclick="shareProduct()">Share</button>
+        <button class="buy-flipkart"><a href="{{productDetails['productLink']}}?th=1&tag=devnydv0a-2"
+            target="_blank">Buy from Amazon</a></button>
       </div>
     </div>
-
-    <section class="reviews">
-      <h2>Customer Reviews</h2>
-      {%for rvs in review%}
-      <div class="review">
-        <div class="review-header">
-          <span class="review-author">{{rvs['reviewedBy']}}</span>
-          <!-- <span class="review-rating">★★★★★</span> -->
-          <span class="review-rating">{{rvs['rating']}} ★</span>
-        </div>
-        <p class="review-content">{{rvs['content']}}</p>
+    <div class="product-info">
+      <h1 class="product-title">{{productDetails['title']}}...</h1>
+      <div class="price-container">
+        <p class="product-price">₹{{productDetails['price']}}</p>
+        <p class="original-price">₹{{productDetails['originalPrice']}}</p>
+        <p class="discount-percentage">{{disc | int}}% OFF</p>
       </div>
-      {%endfor%}
-      
-    </section>
-  </main>
+      <p class="product-rating">★★★★★ {{ratingReview['starRating']}} ({{ratingReview['totalRatings']}} reviews)</p>
+      <p class="product-description">Check out {{productDetails['title']}} from website Amazon. Price of the item is ₹{{productDetails['price']}} and you get a dicount of {{disc | int}}%. The item is rated by {{ratingReview['totalRatings']}} people. You can also read some of the customer review bellow this page.</p>
+        <div class="product-features">
+      <h2>Key Features:</h2>
+      <ul>
+        {% for ftr in features%}
+        <li><b>{{ftr['key'].replace('[', '').replace(']', '')}}:</b> {{ftr.value}}</li>
 
+        {%endfor%}
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    {%for rvs in review%}
+    <div class="review">
+      <div class="review-header">
+        <span class="review-author">{{rvs['reviewedBy']}}</span>
+        <!-- <span class="review-rating">★★★★★</span> -->
+        <span class="review-rating">{{rvs['rating']}} ★</span>
+      </div>
+      <p class="review-content">{{rvs['content']}}</p>
+    </div>
+    {%endfor%}
+
+  </section>
+</main>
+
+
+
+<script>
+  function addToCart() {
+    alert('EchoFlex Pro has been added to your cart!');
+    // In a real implementation, this would add the item to the cart
+    // and update the cart icon/count in the navigation
+  }
+
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+
+  function shareProduct() {
+    // In a real implementation, this would open a share dialog
+    // with options to share on various social media platforms
+              //const url = this.dataset.url;
+              let url =  "https://earbuzz.vercel.app/{{cat}}/{{id}}" 
+              if (navigator.share) {
+                  navigator.share({
+                      title: "Check out {{productDetails['title']}}",
+                      url: url
+                  }).then(() => {
+                      console.log('Thanks for sharing!');
+                      console.log("{{productDetails['title']}}")
+                      
+                  }).catch(console.error);
+              } else {
+                  // Fallback for browsers that don't support the Web Share API
+                  const tempInput = document.createElement('input');
+                  document.body.appendChild(tempInput);
+                  tempInput.value = url;
+                  tempInput.select();
+                  document.execCommand('copy');
+                  document.body.removeChild(tempInput);
+                  alert('Link copied to clipboard!');
+              }
+          };
+      
+  
   
 
-  <script>
-    function addToCart() {
-      alert('EchoFlex Pro has been added to your cart!');
-      // In a real implementation, this would add the item to the cart
-      // and update the cart icon/count in the navigation
-    }
-
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('show');
-    }
-
-    function shareProduct() {
-      // In a real implementation, this would open a share dialog
-      // with options to share on various social media platforms
-      alert('Share functionality coming soon!');
-    }
-
-    function buyFromFlipkart() {
-      // In a real implementation, this would redirect to the Flipkart product page
-      window.open('https://www.flipkart.com/audio-video/headphones/pr?sid=0pm,fcn&otracker=categorytree&p%5B%5D=facets.brand%255B%255D%3DAudioSynergy', '_blank');
-    }
-  </script>
-  {% endblock %}
+  function buyFromFlipkart() {
+    // In a real implementation, this would redirect to the Flipkart product page
+    window.open('https://www.flipkart.com/audio-video/headphones/pr?sid=0pm,fcn&otracker=categorytree&p%5B%5D=facets.brand%255B%255D%3DAudioSynergy', '_blank');
+  }
+</script>
+{% endblock %}

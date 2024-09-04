@@ -167,6 +167,7 @@ main {
 .product-description {
   font-size: 1rem;
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .product-features {
