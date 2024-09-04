@@ -10,6 +10,7 @@
   {%block seo%}
   <title>{{productDetails['title'] [:55]}}</title>
   <link rel="stylesheet" href="{{url_for('static', filename='css/details.css')}}">
+  <meta name="description" content="Buy {{productDetails['title'] [:100]}}">
   {% endblock %}
   {%block content%}
 

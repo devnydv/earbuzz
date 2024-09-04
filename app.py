@@ -33,8 +33,6 @@ def product(cat):
 @app.route("/<cat>/<itemid>") 
 def detail(cat , itemid):
     details = itemdetails(itemid)
-    
-    
     return render_template("details.html",  alld = details)
 
 
