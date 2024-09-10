@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, send_from_directory
 import json
 from db import inddata, catdata, itemdetails
 
@@ -39,7 +39,9 @@ def detail(cat , itemid):
 
 # Error handling
 
-
+@app.route('/robots.txt')
+def robots_txt():
+    return send_from_directory(app.root_path, 'robots.txt')
 
 
 # Custom error pages
