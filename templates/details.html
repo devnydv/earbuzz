@@ -34,6 +34,31 @@
     }]
   }
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "{{productDetails['title']}}",
+      "description": "Check out {{productDetails['title']}} from website Amazon. Price of the item is ₹{{productDetails['price']}}",
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": {{ratingReview['starRating']}},
+          "bestRating": 5
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Earbuzz"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": {{ratingReview['starRating']}},
+        "reviewCount": {{ratingReview['totalRatings']}}
+      }
+    }
+    </script>
 {% endblock %}
 {%block content%}
 
