@@ -1,5 +1,6 @@
 from pymongo.mongo_client import MongoClient
 import requests
+
 api = "mongodb+srv://bittumail:12356789@cluster0.fqrswkj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 client = MongoClient(api)
@@ -13,6 +14,7 @@ def inddata():
 
 def catdata(cat):
     filtered = list(collection.find({"cat": cat}))
+    filtered.reverse()
     return filtered
 
 def itemdetails(id):
