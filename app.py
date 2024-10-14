@@ -44,6 +44,11 @@ def robots_txt():
     return send_from_directory(app.root_path, 'robots.txt')
 
 
+@app.route('/privacy')
+def privat():
+    return render_template("privacy.html")
+    
+
 # Custom error pages
 @app.route('/error_404')
 def error_404():
