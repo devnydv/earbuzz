@@ -1,2 +1,5 @@
 itemcreate.py
 itemdet.py
+.env
+test.py
+price_update.py

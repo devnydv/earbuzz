@@ -1,7 +1,13 @@
 from pymongo.mongo_client import MongoClient
 import requests
+from dotenv import load_dotenv, find_dotenv
+import os
+envpath = find_dotenv()
+load_dotenv(envpath)
+url = os.getenv('db')
 
-api = "mongodb+srv://bittumail:12356789@cluster0.fqrswkj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+api = url
 
 client = MongoClient(api)
 db = client.earbuzz
